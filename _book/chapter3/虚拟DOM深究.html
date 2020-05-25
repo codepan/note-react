@@ -1,0 +1,737 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.5 虚拟DOM深究 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="虚拟DOM的Diff算法.html" />
+    
+    
+    <link rel="prev" href="虚拟DOM初识.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    第1章 React初识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/create-react-app脚手架.html">
+            
+                <a href="../chapter1/create-react-app脚手架.html">
+            
+                    
+                    1.1 create-react-app脚手架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/工程目录简介.html">
+            
+                <a href="../chapter1/工程目录简介.html">
+            
+                    
+                    1.2 工程目录简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/创建组件的方式.html">
+            
+                <a href="../chapter1/创建组件的方式.html">
+            
+                    
+                    1.3 创建组件的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter1/初识JSX.html">
+            
+                <a href="../chapter1/初识JSX.html">
+            
+                    
+                    1.4 初识JSX
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    第2章 React基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/基本知识.html">
+            
+                <a href="../chapter2/基本知识.html">
+            
+                    
+                    2.1 基本知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/再谈JSX语法.html">
+            
+                <a href="../chapter2/再谈JSX语法.html">
+            
+                    
+                    2.2 再谈JSX语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/组件传值-父子组件.html">
+            
+                <a href="../chapter2/组件传值-父子组件.html">
+            
+                    
+                    2.3 组件传值-父子组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/细节知识.html">
+            
+                <a href="../chapter2/细节知识.html">
+            
+                    
+                    2.4 细节知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第3章 React进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="dev-tool安装及使用.html">
+            
+                <a href="dev-tool安装及使用.html">
+            
+                    
+                    3.1 dev-tool安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="PropTypes和defaultProps.html">
+            
+                <a href="PropTypes和defaultProps.html">
+            
+                    
+                    3.2 PropTypes和defaultProps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="props、state与render的关系.html">
+            
+                <a href="props、state与render的关系.html">
+            
+                    
+                    3.3 props、state与render的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="虚拟DOM初识.html">
+            
+                <a href="虚拟DOM初识.html">
+            
+                    
+                    3.4 虚拟DOM初识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.5" data-path="虚拟DOM深究.html">
+            
+                <a href="虚拟DOM深究.html">
+            
+                    
+                    3.5 虚拟DOM深究
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="虚拟DOM的Diff算法.html">
+            
+                <a href="虚拟DOM的Diff算法.html">
+            
+                    
+                    3.6 虚拟DOM的Diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="ref.html">
+            
+                <a href="ref.html">
+            
+                    
+                    3.7 ref
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="React的生命周期.html">
+            
+                <a href="React的生命周期.html">
+            
+                    
+                    3.8 React的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="React提升性能的方式.html">
+            
+                <a href="React提升性能的方式.html">
+            
+                    
+                    3.9 React提升性能的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    第4章 Redux入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/Redux简述.html">
+            
+                <a href="../chapter4/Redux简述.html">
+            
+                    
+                    4.1 Redux简述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/store和reducer的编写.html">
+            
+                <a href="../chapter4/store和reducer的编写.html">
+            
+                    
+                    4.2 store和reducer的编写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/使用Redux完成TodoList.html">
+            
+                <a href="../chapter4/使用Redux完成TodoList.html">
+            
+                    
+                    4.3 使用Redux完成TodoList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/actionTypes枚举.html">
+            
+                <a href="../chapter4/actionTypes枚举.html">
+            
+                    
+                    4.4 actionTypes枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter4/actionCreator统一创建action.html">
+            
+                <a href="../chapter4/actionCreator统一创建action.html">
+            
+                    
+                    4.5 actionCreator统一创建action
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../chapter4/Redux总结.html">
+            
+                <a href="../chapter4/Redux总结.html">
+            
+                    
+                    4.5 Redux总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5/">
+            
+                <a href="../chapter5/">
+            
+                    
+                    第5章 Redux进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/UI组件-容器组件-无状态组件.html">
+            
+                <a href="../chapter5/UI组件-容器组件-无状态组件.html">
+            
+                    
+                    5.1 UI组件-容器组件-无状态组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/Redux中的ajax.html">
+            
+                <a href="../chapter5/Redux中的ajax.html">
+            
+                    
+                    5.2 Redux中的ajax(不推荐该方法)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/使用redux-thunk中间件发送异步请求.html">
+            
+                <a href="../chapter5/使用redux-thunk中间件发送异步请求.html">
+            
+                    
+                    5.3 使用redux-thunk中间件发送异步请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/什么是Redux中间件.html">
+            
+                <a href="../chapter5/什么是Redux中间件.html">
+            
+                    
+                    5.4 什么是Redux中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/redux-saga.html">
+            
+                <a href="../chapter5/redux-saga.html">
+            
+                    
+                    5.5 redux-saga
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../chapter5/react-redux.html">
+            
+                <a href="../chapter5/react-redux.html">
+            
+                    
+                    5.6 react-redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.5 虚拟DOM深究</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x901A;&#x8FC7;&#x4E0A;&#x4E00;&#x8282;&#x7684;&#x8BB2;&#x89E3;&#xFF0C;&#x8FD9;&#x91CC;&#x8981;&#x6F84;&#x6E05;&#x4E00;&#x70B9;&#x5C31;&#x662F;&#xFF1A;</p>
+<p>JSX &#x5E76;&#x4E0D;&#x662F;&#x9875;&#x9762;&#x4E2D;&#x7684;&#x771F;&#x5B9E;DOM&#xFF0C;&#x5B83;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x677F;&#xFF0C;React&#x4F1A;&#x5C06;&#x5176;&#x4F59;state&#x548C;props&#x7ED3;&#x5408;&#xFF0C;&#x7ED3;&#x5408;&#x4E4B;&#x540E;&#x751F;&#x6210;&#x865A;&#x62DF;DOM&#xFF0C;&#x6709;&#x4E86;&#x865A;&#x62DF;DOM&#x4E4B;&#x540E;&#xFF0C;&#x518D;&#x751F;&#x6210;&#x771F;&#x5B9E;&#x7684;DOM</p>
+<p>React&#x4E2D;&#x5C06;JSX&#x662F;&#x6309;&#x7167;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x5F0F;&#x4E00;&#x6B65;&#x6B65;&#x5C06;&#x5176;&#x53D8;&#x6210;&#x771F;&#x5B9E;&#x7684;DOM&#x7684;&#xFF1A;</p>
+<blockquote>
+<p>JSX ---&gt; createElement ---&gt; JS&#x5BF9;&#x8C61;&#xFF08;&#x865A;&#x62DF;DOM) ---&gt; &#x771F;&#x5B9E;&#x7684;DOM</p>
+</blockquote>
+<p>&#x5BF9;&#x4E0A;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x505A;&#x4E00;&#x4E2A;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;</p>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x4F7F;&#x7528;JSX&#x7F16;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x6A21;&#x677F;</p>
+<pre><code class="lang-jsx">&lt;div&gt;item&lt;/div&gt;
+</code></pre>
+<p>&#x63A5;&#x7740;React&#x5E95;&#x5C42;&#x4F1A;&#x5C06;&#x4E0A;&#x9762;&#x7684;JSX&#x4F7F;&#x7528;React.createElement()&#x65B9;&#x6CD5;&#x53D8;&#x6210;JS&#x5BF9;&#x8C61;</p>
+<pre><code class="lang-js"><span class="hljs-comment">/*
+&#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;
+* &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x6807;&#x7B7E;&#x540D;
+* &#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x5C5E;&#x6027;&#x952E;&#x503C;&#x5BF9;
+* &#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x6807;&#x7B7E;&#x7684;&#x5185;&#x5BB9;
+*/</span>
+React.createElement(<span class="hljs-string">&apos;div&apos;</span>, {}, <span class="hljs-string">&apos;item&apos;</span>)
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x5373;&#x4F7F;&#x6211;&#x4EEC;&#x4E0D;&#x4F7F;&#x7528;JSX&#xFF0C;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;createElement&#x65B9;&#x6CD5;&#x4E00;&#x6837;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x5DE5;&#x4F5C;&#xFF0C;&#x4F46;&#x662F;createElement&#x6BD4;&#x8F83;&#x5E95;&#x5C42;&#xFF0C;&#x7F16;&#x5199;&#x8D77;&#x6765;&#x4E0D;&#x662F;&#x90A3;&#x4E48;&#x7684;&#x5BB9;&#x6613;&#xFF0C;</p>
+<p>&#x6240;&#x4EE5;React&#x53D1;&#x660E;&#x4EBA;&#x8111;&#x6D1E;&#x5927;&#x5F00;&#xFF0C;&#x53D1;&#x660E;&#x51FA;&#x4E86;JSX&#x8FD9;&#x4E2A;&#x4E1C;&#x897F;&#xFF0C;JSX&#xFF08;<code>Javascript XML</code>&#x7684;&#x7B80;&#x79F0;&#xFF09;</p>
+<p>virtualDOM&#x7684;&#x4F18;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x6027;&#x80FD;&#x63D0;&#x5347;&#x4E86;</li>
+<li>&#x5B83;&#x4F7F;&#x5F97;&#x8DE8;&#x7AEF;&#x5E94;&#x7528;&#x5F97;&#x4EE5;&#x5B9E;&#x73B0;&#xFF0C;&#x4F8B;&#x5982;React Native&#xFF0C;&#x53EF;&#x4EE5;&#x548C;Android&#x6216;IOS&#x4E00;&#x6837;&#x5F00;&#x53D1;&#x539F;&#x751F;&#x5E94;&#x7528;<ul>
+<li>&#x539F;&#x751F;&#x5E94;&#x7528;&#x6BD4;web&#x5E94;&#x7528;&#x4F53;&#x9A8C;&#x597D;&#x8FD9;&#x662F;&#x6BCB;&#x5EB8;&#x7F6E;&#x7591;&#x7684;&#xFF0C;&#x4F46;&#x662F;React&#x4E2D;&#x6709;virtualDOM&#x6027;&#x80FD;&#x5F88;&#x9AD8;&#xFF0C;&#x6240;&#x4EE5;&#x7167;&#x6837;&#x4E0E;&#x5176;&#x5AB2;&#x7F8E;</li>
+<li>&#x771F;&#x5B9E;DOM&#x6D4F;&#x89C8;&#x5668;&#x8BA4;&#x8BC6;&#xFF0C;&#x4F46;&#x539F;&#x751F;&#x5E94;&#x7528;&#x662F;&#x65E0;&#x6CD5;&#x8BC6;&#x522B;&#x7684;&#x3002;&#x597D;&#x5728;&#x539F;&#x751F;&#x5E94;&#x7528;&#x53EF;&#x4EE5;&#x8BA4;&#x8BC6;&#x865A;&#x62DF;DOM&#x5373;JS&#x5BF9;&#x8C61;</li>
+<li>&#x6709;&#x4E86;&#x865A;&#x62DF;DOM&#xFF0C;&#x5982;&#x679C;&#x6B64;&#x65F6;&#x5904;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x73AF;&#x5883;&#xFF0C;&#x90A3;&#x4E48;React&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x771F;&#x5B9E;DOM&#x6E32;&#x67D3;&#xFF1B;&#x5982;&#x679C;&#x6B64;&#x65F6;&#x5904;&#x4E8E;&#x539F;&#x751F;&#x5E94;&#x7528;&#x73AF;&#x5883;&#xFF0C;&#x90A3;&#x4E48;React&#x53C8;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x6210;&#x539F;&#x751F;&#x7684;&#x7EC4;&#x4EF6;</li>
+<li>&#x6240;&#x4EE5;&#x8BF4;React&#x65E2;&#x80FD;&#x5F00;&#x53D1;&#x7F51;&#x9875;&#x5E94;&#x7528;&#xFF0C;&#x53C8;&#x80FD;&#x5F00;&#x53D1;&#x539F;&#x751F;&#x5E94;&#x7528;</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="虚拟DOM初识.html" class="navigation navigation-prev " aria-label="Previous page: 3.4 虚拟DOM初识">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="虚拟DOM的Diff算法.html" class="navigation navigation-next " aria-label="Next page: 3.6 虚拟DOM的Diff算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.5 虚拟DOM深究","level":"1.4.5","depth":2,"next":{"title":"3.6 虚拟DOM的Diff算法","level":"1.4.6","depth":2,"path":"chapter3/虚拟DOM的Diff算法.md","ref":"chapter3/虚拟DOM的Diff算法.md","articles":[]},"previous":{"title":"3.4 虚拟DOM初识","level":"1.4.4","depth":2,"path":"chapter3/虚拟DOM初识.md","ref":"chapter3/虚拟DOM初识.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/虚拟DOM深究.md","mtime":"2019-06-29T10:54:42.855Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-04T02:18:01.091Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,3 @@
+props或state的变化都会触发render函数执行，重新渲染DOM
+
+父组件render函数的执行，也都会触发子组件render函数的执行

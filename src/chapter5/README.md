@@ -1,0 +1,1 @@
+本章主要讲解UI组件与容器组件基础，如何使用redux-thunk，redux-saga等Redux中间件，以及react-redux的使用方式。

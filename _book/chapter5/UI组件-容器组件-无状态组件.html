@@ -1,0 +1,723 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5.1 UI组件-容器组件-无状态组件 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Redux中的ajax.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    第1章 React初识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/create-react-app脚手架.html">
+            
+                <a href="../chapter1/create-react-app脚手架.html">
+            
+                    
+                    1.1 create-react-app脚手架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/工程目录简介.html">
+            
+                <a href="../chapter1/工程目录简介.html">
+            
+                    
+                    1.2 工程目录简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/创建组件的方式.html">
+            
+                <a href="../chapter1/创建组件的方式.html">
+            
+                    
+                    1.3 创建组件的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter1/初识JSX.html">
+            
+                <a href="../chapter1/初识JSX.html">
+            
+                    
+                    1.4 初识JSX
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    第2章 React基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/基本知识.html">
+            
+                <a href="../chapter2/基本知识.html">
+            
+                    
+                    2.1 基本知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/再谈JSX语法.html">
+            
+                <a href="../chapter2/再谈JSX语法.html">
+            
+                    
+                    2.2 再谈JSX语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/组件传值-父子组件.html">
+            
+                <a href="../chapter2/组件传值-父子组件.html">
+            
+                    
+                    2.3 组件传值-父子组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/细节知识.html">
+            
+                <a href="../chapter2/细节知识.html">
+            
+                    
+                    2.4 细节知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    第3章 React进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/dev-tool安装及使用.html">
+            
+                <a href="../chapter3/dev-tool安装及使用.html">
+            
+                    
+                    3.1 dev-tool安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/PropTypes和defaultProps.html">
+            
+                <a href="../chapter3/PropTypes和defaultProps.html">
+            
+                    
+                    3.2 PropTypes和defaultProps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/props、state与render的关系.html">
+            
+                <a href="../chapter3/props、state与render的关系.html">
+            
+                    
+                    3.3 props、state与render的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/虚拟DOM初识.html">
+            
+                <a href="../chapter3/虚拟DOM初识.html">
+            
+                    
+                    3.4 虚拟DOM初识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/虚拟DOM深究.html">
+            
+                <a href="../chapter3/虚拟DOM深究.html">
+            
+                    
+                    3.5 虚拟DOM深究
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter3/虚拟DOM的Diff算法.html">
+            
+                <a href="../chapter3/虚拟DOM的Diff算法.html">
+            
+                    
+                    3.6 虚拟DOM的Diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../chapter3/ref.html">
+            
+                <a href="../chapter3/ref.html">
+            
+                    
+                    3.7 ref
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../chapter3/React的生命周期.html">
+            
+                <a href="../chapter3/React的生命周期.html">
+            
+                    
+                    3.8 React的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../chapter3/React提升性能的方式.html">
+            
+                <a href="../chapter3/React提升性能的方式.html">
+            
+                    
+                    3.9 React提升性能的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    第4章 Redux入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/Redux简述.html">
+            
+                <a href="../chapter4/Redux简述.html">
+            
+                    
+                    4.1 Redux简述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/store和reducer的编写.html">
+            
+                <a href="../chapter4/store和reducer的编写.html">
+            
+                    
+                    4.2 store和reducer的编写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/使用Redux完成TodoList.html">
+            
+                <a href="../chapter4/使用Redux完成TodoList.html">
+            
+                    
+                    4.3 使用Redux完成TodoList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/actionTypes枚举.html">
+            
+                <a href="../chapter4/actionTypes枚举.html">
+            
+                    
+                    4.4 actionTypes枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter4/actionCreator统一创建action.html">
+            
+                <a href="../chapter4/actionCreator统一创建action.html">
+            
+                    
+                    4.5 actionCreator统一创建action
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../chapter4/Redux总结.html">
+            
+                <a href="../chapter4/Redux总结.html">
+            
+                    
+                    4.5 Redux总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第5章 Redux进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="UI组件-容器组件-无状态组件.html">
+            
+                <a href="UI组件-容器组件-无状态组件.html">
+            
+                    
+                    5.1 UI组件-容器组件-无状态组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="Redux中的ajax.html">
+            
+                <a href="Redux中的ajax.html">
+            
+                    
+                    5.2 Redux中的ajax(不推荐该方法)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="使用redux-thunk中间件发送异步请求.html">
+            
+                <a href="使用redux-thunk中间件发送异步请求.html">
+            
+                    
+                    5.3 使用redux-thunk中间件发送异步请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="什么是Redux中间件.html">
+            
+                <a href="什么是Redux中间件.html">
+            
+                    
+                    5.4 什么是Redux中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="redux-saga.html">
+            
+                <a href="redux-saga.html">
+            
+                    
+                    5.5 redux-saga
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="react-redux.html">
+            
+                <a href="react-redux.html">
+            
+                    
+                    5.6 react-redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >5.1 UI组件-容器组件-无状态组件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ui&#x7EC4;&#x4EF6;">UI&#x7EC4;&#x4EF6;</h1>
+<p>UI&#x7EC4;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;&#x53EA;&#x5305;&#x542B;render&#x65B9;&#x6CD5;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x5305;&#x62EC;&#x4E00;&#x4E9B;&#x5176;&#x5B83;&#x7684;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x6CD5;</p>
+<p>&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;UI&#x7EC4;&#x4EF6;&#x53EA;&#x8D1F;&#x8D23;UI&#x6E32;&#x67D3;&#x7684;&#x90E8;&#x5206;</p>
+<p>&#x4E1A;&#x754C;&#x53C8;&#x5C06;&#x5176;&#x79F0;&#x4E4B;&#x4E3A;&#x201C;&#x50BB;&#x74DC;&#x7EC4;&#x4EF6;&#x201D;</p>
+<h1 id="&#x5BB9;&#x5668;&#x7EC4;&#x4EF6;">&#x5BB9;&#x5668;&#x7EC4;&#x4EF6;</h1>
+<p>&#x901A;&#x8FC7;&#x5F15;&#x5165;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5305;&#x542B;UI&#x7EC4;&#x4EF6;&#xFF0C;render&#x90E8;&#x5206;&#x76F4;&#x63A5;&#x6E32;&#x67D3;&#x5BFC;&#x5165;&#x8FDB;&#x6765;&#x7684;UI&#x7EC4;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x5C06;UI&#x7EC4;&#x4EF6;&#x6240;&#x9700;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;&#x5168;&#x90E8;&#x901A;&#x8FC7;&#x5C5E;&#x6027;&#x7684;&#x5F62;&#x5F0F;&#x4F20;&#x9012;&#x7ED9;UI&#x7EC4;&#x4EF6;</p>
+<p>&#x4E1A;&#x754C;&#x53C8;&#x5C06;&#x5176;&#x79F0;&#x4E4B;&#x4E3A;&#x201C;&#x806A;&#x660E;&#x7EC4;&#x4EF6;&#x201D;</p>
+<h1 id="&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;">&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;</h1>
+<p>&#x5373;&#x4E3A;&#x6CA1;&#x6709;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x6216;&#x8005;&#x8BF4;&#x6CA1;&#x6709;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x7684;&#x7EC4;&#x4EF6;</p>
+<p>&#x666E;&#x901A;&#x7684;&#x7EC4;&#x4EF6;&#x90FD;&#x662F;&#x4E00;&#x4E2A;class&#xFF0C;&#x800C;&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x5185;&#x5BB9;&#x548C;render&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x5185;&#x5BB9;&#x4E00;&#x6837;&#xFF0C;&#x90FD;&#x662F;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;jsx</p>
+<p>&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#x9002;&#x7528;&#x4E8E;&#x4EC5;&#x4EC5;&#x5305;&#x542B;&#x4E00;&#x4E2A;render&#x51FD;&#x6570;&#x7684;UI&#x7EC4;&#x4EF6;&#xFF0C;&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#x7684;&#x51FD;&#x6570;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;UI&#x7EC4;&#x4EF6;&#x7684;render&#x65B9;&#x6CD5;</p>
+<p>&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#x548C;&#x666E;&#x901A;&#x7EC4;&#x4EF6;&#x76F8;&#x6BD4;&#xFF1A;<strong><em>&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#x7684;&#x6027;&#x80FD;&#x66F4;&#x9AD8;</em></strong>&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#x4E0D;&#x9700;&#x8981;React&#x521D;&#x59CB;&#x5316;&#x4E00;&#x5927;&#x5806;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x7B49;&#x5176;&#x5B83;&#x5F88;&#x591A;&#x4E71;&#x4E03;&#x516B;&#x7CDF;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x6240;&#x4EE5;&#x5176;&#x6027;&#x80FD;&#x66F4;&#x9AD8;</p>
+<p>&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#x672C;&#x8D28;&#x4E0A;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4F1A;&#x5728;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#x88AB;React&#x8C03;&#x7528;&#xFF0C;&#x8C03;&#x7528;&#x65F6;React&#x4F1A;&#x5411;&#x51FD;&#x6570;&#x6CE8;&#x5165;props&#x53C2;&#x6570;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// src/TodoItemUI.js</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> props =&gt; ({
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span>
+})
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 第5章 Redux进阶">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Redux中的ajax.html" class="navigation navigation-next " aria-label="Next page: 5.2 Redux中的ajax(不推荐该方法)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5.1 UI组件-容器组件-无状态组件","level":"1.6.1","depth":2,"next":{"title":"5.2 Redux中的ajax(不推荐该方法)","level":"1.6.2","depth":2,"path":"chapter5/Redux中的ajax.md","ref":"chapter5/Redux中的ajax.md","articles":[]},"previous":{"title":"第5章 Redux进阶","level":"1.6","depth":1,"path":"chapter5/README.md","ref":"chapter5/README.md","articles":[{"title":"5.1 UI组件-容器组件-无状态组件","level":"1.6.1","depth":2,"path":"chapter5/UI组件-容器组件-无状态组件.md","ref":"chapter5/UI组件-容器组件-无状态组件.md","articles":[]},{"title":"5.2 Redux中的ajax(不推荐该方法)","level":"1.6.2","depth":2,"path":"chapter5/Redux中的ajax.md","ref":"chapter5/Redux中的ajax.md","articles":[]},{"title":"5.3 使用redux-thunk中间件发送异步请求","level":"1.6.3","depth":2,"path":"chapter5/使用redux-thunk中间件发送异步请求.md","ref":"chapter5/使用redux-thunk中间件发送异步请求.md","articles":[]},{"title":"5.4 什么是Redux中间件","level":"1.6.4","depth":2,"path":"chapter5/什么是Redux中间件.md","ref":"chapter5/什么是Redux中间件.md","articles":[]},{"title":"5.5 redux-saga","level":"1.6.5","depth":2,"path":"chapter5/redux-saga.md","ref":"chapter5/redux-saga.md","articles":[]},{"title":"5.6 react-redux","level":"1.6.6","depth":2,"path":"chapter5/react-redux.md","ref":"chapter5/react-redux.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/UI组件-容器组件-无状态组件.md","mtime":"2019-07-02T02:07:57.698Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-04T02:18:01.091Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
